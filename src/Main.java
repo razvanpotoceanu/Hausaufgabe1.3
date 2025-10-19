@@ -1,13 +1,55 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public class Main {
+    public static void main(String[] args) {
+        //subpunct1
+        int[] array1 = {1, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] array2 = {8, 2, 0, 0, 0, 0, 0, 0, 0};
+
+        int[] summe = Summe.findeSumme(array1, array2);
+        System.out.println("Summe: ");
+        int start = (summe[0] == 0) ? 1 : 0;
+        for (int i = start; i < summe.length; i++) {
+            System.out.print(summe[i]);
+        }
+        System.out.println();
+
+        //subpunct2
+
+//        int[] array3 = {8, 3, 0, 0, 0, 0, 0, 0, 0};
+//        int[] array4 = {5, 4, 0, 0, 0, 0, 0, 0, 0};
+
+        int[] array3 = {8, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] array4 = {8, 2, 0, 0, 0, 0, 0, 0, 0};
+
+        int[] differenz = Differenz.findeDifferenz(array3, array4);
+        System.out.println("Differenz: ");
+        start = (differenz[0] == 0) ? 1 : 0;
+        for (int i = start; i < differenz.length; i++) {
+            System.out.print(differenz[i]);
+        }
+        System.out.println();
+
+        //subpunct 3
+
+        int[] array5 = {2, 3, 6, 0, 0, 0, 0, 0, 0};
+        int ziffer = 2;
+        System.out.println("Multiplikation: ");
+        int[] multiplikation = Multiplikation.multipliziereMitZiffer(array5, ziffer);
+        start = (multiplikation[0] == 0) ? 1 : 0;
+        for (int i = start; i < multiplikation.length; i++) {
+            System.out.print(multiplikation[i]);
+        }
+
+        System.out.println();
+
+        //subpunct 4
+        int[] array6 = {1, 3, 6, 0, 0, 0, 0, 0, 0};
+        int[] division = Division.divisionMitZiffer(array6, ziffer);
+        System.out.println("Division: ");
+        start = (division[0] == 0) ? 1 : 0;
+
+        for (int i = start; i < division.length; i++) {
+            System.out.print(division[i]);
+        }
     }
 }
